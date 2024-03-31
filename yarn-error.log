@@ -1,0 +1,102 @@
+Arguments: 
+  /Users/wangzha/.nvm/versions/node/v16.20.2/bin/node /Users/wangzha/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/wangzha/.nvm/versions/node/v16.20.2/bin:/Users/wangzha/.yarn/bin:/Users/wangzha/.config/yarn/global/node_modules/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/wangzha/.yarn/bin:/Users/wangzha/.config/yarn/global/node_modules/.bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.20.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: certificate has expired
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1539:34)
+      at TLSSocket.emit (node:events:513:28)
+      at TLSSocket._finishInit (node:_tls_wrap:953:8)
+      at TLSWrap.ssl.onhandshakedone (node:_tls_wrap:734:12)
+
+npm manifest: 
+  {
+    "name": "lego-bricks",
+    "version": "1.0.10",
+    "private": false,
+    "author": "Viking Zhang",
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "npm run clean && npm run build:esm && npm run build:umd",
+      "test:watch": "vue-cli-service test:unit --watch",
+      "test": "vue-cli-service test:unit",
+      "lint": "vue-cli-service lint --max-warnings 5",
+      "build:esm": "rollup --config build/rollup.esm.config.js",
+      "build:umd": "rollup --config build/rollup.umd.config.js",
+      "clean": "rimraf ./dist",
+      "prepublishOnly": "npm run lint && npm run test&& npm run build"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run lint && npm run test"
+      }
+    },
+    "main": "dist/lego-bricks.umd.js",
+    "module": "dist/lego-bricks.esm.js",
+    "files": [
+      "dist"
+    ],
+    "dependencies": {
+      "core-js": "^3.6.5",
+      "lodash-es": "^4.17.20"
+    },
+    "devDependencies": {
+      "@rollup/plugin-node-resolve": "^11.1.1",
+      "@rollup/plugin-typescript": "^8.1.1",
+      "@types/jest": "^24.0.19",
+      "@types/lodash-es": "^4.17.4",
+      "@typescript-eslint/eslint-plugin": "^2.33.0",
+      "@typescript-eslint/parser": "^2.33.0",
+      "@vue/cli-plugin-babel": "~4.5.0",
+      "@vue/cli-plugin-eslint": "~4.5.0",
+      "@vue/cli-plugin-typescript": "~4.5.0",
+      "@vue/cli-plugin-unit-jest": "^4.5.11",
+      "@vue/cli-service": "~4.5.0",
+      "@vue/compiler-sfc": "^3.0.0",
+      "@vue/eslint-config-typescript": "^5.0.2",
+      "@vue/test-utils": "^2.0.0-0",
+      "eslint": "^6.7.2",
+      "eslint-plugin-vue": "^7.0.0-0",
+      "husky": "^4.3.8",
+      "rimraf": "^3.0.2",
+      "rollup": "^2.38.5",
+      "rollup-plugin-css-only": "^3.1.0",
+      "rollup-plugin-typescript2": "^0.29.0",
+      "rollup-plugin-vue": "^6.0.0",
+      "typescript": "~3.9.3",
+      "vue": "^3.0.0",
+      "vue-jest": "^5.0.0-0"
+    },
+    "peerDependencies": {
+      "vue": "^3.0.0"
+    },
+    "homepage": "https://github.com/imooc-lego/lego-components",
+    "keywords": [
+      "Component",
+      "UI",
+      "Vue3"
+    ],
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/imooc-lego/lego-components"
+    },
+    "types": "dist/index.d.ts"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
